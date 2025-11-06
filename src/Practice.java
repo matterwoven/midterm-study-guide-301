@@ -86,7 +86,16 @@ public class Practice {
         return secondmost;
     }
 
-
+    public static String longestCharWordArr(String[] strings, String charToSearch) {
+        charToSearch = charToSearch.toLowerCase();
+        String longestString = "";
+        for (String n : strings) {
+            if(n.toLowerCase().startsWith(charToSearch) && longestString.length() < n.length()) {
+                longestString = n;
+            }
+        }
+        return longestString;
+    }
     // TODO: Implement the other methods from the study guide AND tests for each one
 
     // For each method you are only required to implement it for one of the data

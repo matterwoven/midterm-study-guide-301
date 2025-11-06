@@ -85,6 +85,14 @@ public class PracticeTest {
 
         assertEquals(5, actual);
     }
+
+    @Test
+    void longestCharWordArrayUpperAndLowercase() {
+        String[] words = {"Hello", "Helloenhaven", "SuperLongWordOfCrazyness", "Zap", "Zipper", "zippeey"};
+        String actual = Practice.longestCharWordArr(words, "z");
+
+        assertEquals("zippeey", actual);
+    }
     
 
     // TODO: Make tests for each problem you solve
