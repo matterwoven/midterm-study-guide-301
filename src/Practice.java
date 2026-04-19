@@ -7,9 +7,25 @@ public class Practice {
      */
     public static int maxDiff(int[] nums) {
         // TODO: implement this
-        return -1;
+        int largest = 0;
+        int smallest = 0;
+        boolean flip = true;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > largest || flip == true){
+                largest = nums[i];
+            }
+            if(nums[i] < smallest || flip == true){
+                smallest = nums[i];
+                flip = false;
+            }
+        }
+        return largest - smallest;
     }
 
+    public static void main(String[] args) {
+        int[] numbers = {3, 7, 2, 9, 4};
+        System.out.println(maxDiff(numbers));
+    }
 
     // TODO: Implement the other methods from the README AND tests for each one
 
