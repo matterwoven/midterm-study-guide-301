@@ -1,3 +1,5 @@
+
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
