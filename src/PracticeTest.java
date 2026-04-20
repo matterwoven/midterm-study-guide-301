@@ -1,4 +1,4 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -69,7 +69,7 @@ public class PracticeTest {
         for(int num : secondLargestOfKeysArray){
             secondLargestKeysHash.put(num, 1);
         }
-        assertEquals(-1, secondLargestNumberKeys(secondLargestKeysHash));
+        assertEquals(-1, Practice.secondLargestNumberKeys(secondLargestKeysHash));
     }
 }
 
