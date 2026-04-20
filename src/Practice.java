@@ -62,10 +62,8 @@ public class Practice {
             }
         }
         if(evenCount > oddCount){
-            //System.out.println("Results compiled: Even '"+ evenCount + "' Odd '" + oddCount + "'.");
             return evenCount - oddCount;
         }
-        //System.out.println("Results compiled: Even '"+ evenCount + "' Odd '" + oddCount + "'.");
         return oddCount - evenCount;
     }
 
