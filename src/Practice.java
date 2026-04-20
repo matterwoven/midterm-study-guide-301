@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 
 
@@ -35,7 +36,19 @@ public class Practice {
             }
         }
         return currentLongest;
+    
     }
+
+    public static int wordsLongerThanAndShorterThan(HashSet<String> hashSet, int n, int m){
+        int count = 0;
+        for(String words : hashSet){
+            if(words.length() > n && words.length() < m) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 
     public static void main(String[] args) {
         int[] numbers = {3, 7, 2, 9, 4};
@@ -49,8 +62,13 @@ public class Practice {
         }
         System.out.println(longestWordByStartingLetter(words, "s"));
         //Count how many words are longer than n characters and shorter than m characters in a HashSet
-
-        //Find the difference between the how many odd and even numbers there are in the values of a HashMap
+        String[] wordsLongShortArray = {"Word", "Animal", "Adjective", "Bull", "Bologna", "Super", "Secretive"};
+        HashSet<String> wordsLongShort = new HashSet();
+        for(String wordShorter : wordsLongShortArray){
+            wordsLongShort.add(wordShorter);
+        }
+        System.out.println(wordsLongerThanAndShorterThan(wordsLongShort, 4, 7));
+        //Find the difference between how many odd and even numbers there are in the values of a HashMap
 
         //Find the second-largest number in the keys of a HashMap
     }
