@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 public class PracticeTest {
 
     // TODO: Make more tests for maxDiff
-    
     // Find the difference between the largest and smallest integer in:
     // - An array
     @Test
