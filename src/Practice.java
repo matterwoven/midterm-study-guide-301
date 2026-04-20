@@ -1,4 +1,7 @@
 
+import java.util.ArrayList;
+
+
 
 public class Practice {
     /**
@@ -24,9 +27,32 @@ public class Practice {
         return largest - smallest;
     }
 
+    public static String longestWordByStartingLetter(ArrayList<String> arrayList, String startLetter) {
+        String currentLongest = "";
+        for(String word : arrayList){
+            if(word.toLowerCase().startsWith(startLetter.toLowerCase()) && word.length() > currentLongest.length()){
+                currentLongest = word;                
+            }
+        }
+        return currentLongest;
+    }
+
     public static void main(String[] args) {
         int[] numbers = {3, 7, 2, 9, 4};
+        //Difference in an array
         System.out.println(maxDiff(numbers));
+        //Find the longest word that starts with a specific character letter in an arraylist
+        String[] wordsArray = {"Word", "Animal", "Adjective", "Bull", "Bologna", "Super", "Secretive"};
+        ArrayList<String> words = new ArrayList<String>(); 
+        for(int i = 0; wordsArray.length > i; i++){
+            words.add(wordsArray[i]);
+        }
+        System.out.println(longestWordByStartingLetter(words, "s"));
+        //Count how many words are longer than n characters and shorter than m characters in a HashSet
+
+        //Find the difference between the how many odd and even numbers there are in the values of a HashMap
+
+        //Find the second-largest number in the keys of a HashMap
     }
 
     // TODO: Implement the other methods from the README AND tests for each one
