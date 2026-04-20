@@ -67,6 +67,27 @@ public class Practice {
         return oddCount - evenCount;
     }
 
+    public static int secondLargestNumberKeys(HashMap<Integer, Integer> hashMap){
+        int secondLargest = 0;
+        int largest = 0;
+        boolean flag = true;
+        for (int key : hashMap.keySet()){
+            if(flag == true){
+                secondLargest = key;
+                largest = key;
+                flag = false;
+            }
+            if(key > largest){
+                secondLargest = largest;
+                largest = key;
+            }
+            if(key > secondLargest && key < largest){
+                secondLargest = key;
+            }
+        }
+        return secondLargest;
+    }
+
     public static void main(String[] args) {
         int[] numbers = {3, 7, 2, 9, 4};
         //Difference in an array
@@ -95,6 +116,12 @@ public class Practice {
         }
         System.out.println(differenceBetweenEvenOddCountValues(differenceValuesHash));
         //Find the second-largest number in the keys of a HashMap
+        int[] secondLargestOfKeysArray = {-55, -50, -8, -2, -1, 5,};
+        HashMap<Integer, Integer> secondLargestKeysHash = new HashMap();
+        for(int num : secondLargestOfKeysArray){
+            secondLargestKeysHash.put(num, 1);
+        }
+        System.out.println(secondLargestNumberKeys(secondLargestKeysHash));
     }
 
     // TODO: Implement the other methods from the README AND tests for each one
