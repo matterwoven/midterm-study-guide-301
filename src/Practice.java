@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 
@@ -49,6 +50,24 @@ public class Practice {
         return count;
     }
 
+    public static int differenceBetweenEvenOddCountValues(HashMap<Integer, Integer> hashMap){
+        int evenCount = 0;
+        int oddCount = 0;
+        for (int nums : hashMap.values()){
+            if(nums % 2 == 0){
+                evenCount++;
+            }
+            else{
+                oddCount++;
+            }
+        }
+        if(evenCount > oddCount){
+            //System.out.println("Results compiled: Even '"+ evenCount + "' Odd '" + oddCount + "'.");
+            return evenCount - oddCount;
+        }
+        //System.out.println("Results compiled: Even '"+ evenCount + "' Odd '" + oddCount + "'.");
+        return oddCount - evenCount;
+    }
 
     public static void main(String[] args) {
         int[] numbers = {3, 7, 2, 9, 4};
@@ -69,7 +88,14 @@ public class Practice {
         }
         System.out.println(wordsLongerThanAndShorterThan(wordsLongShort, 4, 7));
         //Find the difference between how many odd and even numbers there are in the values of a HashMap
-
+        int[] evenOddValuesHashMap = {1, 2, 15, 99, 32, 24, 17, 12, 16, 4, 1, 2, 7, 9, 3, 13, 6, 7, 5};
+        HashMap<Integer, Integer> differenceValuesHash = new HashMap();
+        int increment = 0;
+        for(int num : evenOddValuesHashMap){
+            differenceValuesHash.put(increment, num);
+            increment++;
+        }
+        System.out.println(differenceBetweenEvenOddCountValues(differenceValuesHash));
         //Find the second-largest number in the keys of a HashMap
     }
 
