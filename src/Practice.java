@@ -89,8 +89,8 @@ public class Practice {
     }
 
     public static void main(String[] args) {
-        int[] numbers = {3, 7, 2, 9, 4};
         //Difference in an array
+        int[] numbers = {3, 7, 2, 9, 4};
         System.out.println(maxDiff(numbers));
         //Find the longest word that starts with a specific character letter in an arraylist
         String[] wordsArray = {"Word", "Animal", "Adjective", "Bull", "Bologna", "Super", "Secretive"};
@@ -105,7 +105,7 @@ public class Practice {
         for(String wordShorter : wordsLongShortArray){
             wordsLongShort.add(wordShorter);
         }
-        System.out.println(wordsLongerThanAndShorterThan(wordsLongShort, 4, 7));
+        System.out.println(wordsLongerThanAndShorterThan(wordsLongShort, -4, 5));
         //Find the difference between how many odd and even numbers there are in the values of a HashMap
         int[] evenOddValuesHashMap = {1, 2, 15, 99, 32, 24, 17, 12, 16, 4, 1, 2, 7, 9, 3, 13, 6, 7, 5};
         HashMap<Integer, Integer> differenceValuesHash = new HashMap();
